@@ -1,3 +1,9 @@
+Version 1.4:
+
+- Add `stubs` method as syntactic sugar for `expects ... anyNumberOfTimes`
+- Add `inAnyOrder` and allow ordered and unordered expectations to be arbitrarily nested.
+- Add `where` for predicate matching and `onCall` for computed return values.
+
 Version 1.3:
 
 - Switch to using thread context class loader when creating proxies by default
