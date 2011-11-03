@@ -67,5 +67,5 @@ object Borachio extends Build {
   def specs2Version(scalaVersion: String) = getLibraryVersion(specs2Versions, scalaVersion)
   
   def getLibraryVersion(versionMap: Map[String, String], scalaVersion: String) =
-    versionMap.getOrElse(scalaVersion take 3, error("Unsupported Scala version: "+ scalaVersion))
+    versionMap.getOrElse(scalaVersion take 3, sys.error("Unsupported Scala version: "+ scalaVersion))
 }
