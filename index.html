@@ -40,71 +40,8 @@
     <div class="description">
       Native Scala mocking
     </div>
-    
-    <h2>Mocking objects</h2>
-    
-    <pre>def testTurtle {
-  val t = mock[Turtle]
 
-  t expects 'penDown
-  t expects 'turn withArgs (90.0)
-  t expects 'forward withArgs (10.0)
-  t expects 'getPosition returning (0.0, 10.0)
-  
-  drawLine(t)
-}</pre>
-
-    <h2>Mocking functions</h2>
-    
-    <pre>def testFoldLeft() {
-  val f = mockFunction[String, Int, String]
-
-  f expects ("initial", 0) returning "intermediate one"
-  f expects ("intermediate one", 1) returning "intermediate two"
-  f expects ("intermediate two", 2) returning "intermediate three"
-  f expects ("intermediate three", 3) returning "final"
-
-  expect("final") { Seq(0, 1, 2, 3).foldLeft("initial")(f) }
-}</pre>
-
-    <p>
-      <a href="http://www.paulbutcher.com/2011/02/mocking-in-scala-with-borachio-step-by-step/">Full worked example</a>
-    </p>
-
-    <p>
-      <a href="https://github.com/paulbutcher/borachio/tree/master/core_tests/src/test/scala/examples">More examples</a>
-    </p>
-    
-    <p>
-      <a href="http://www.paulbutcher.com/2011/03/mock-objects-on-android-with-borachio-part-1/">Using Borachio on Android</a>
-    </p>
-    
-    <p>
-      <a href="https://github.com/jaley/borachio-warehouse">Android, Dependency Injection and Mock Testing</a>
-    </p>
-
-    <h2>Installing</h2>
-    
-    <p>
-      Borachio is <a href="https://github.com/paulbutcher/borachio">hosted on GitHub</a>
-    </p>
-    
-    <p>
-      To use Borachio in <a href="https://github.com/harrah/xsbt/wiki">sbt</a> add the following to your project file:
-    </p>
-    
-    <pre>libraryDependencies +=
-  "com.borachio" %% "borachio-scalatest-support" % "latest.integration")</pre>
-    
-    <p>
-      <a href="http://maven.apache.org/">Maven</a> users, or if you just want to download the JAR, <a href="http://scala-tools.org/repo-releases/com/borachio/">look here</a>.
-    </p>
-    
-    <h2>Documentation</h2>
-    
-    <p>
-      <a href="api/index.html#com.borachio.package">Scaladoc</a>
-    </p>
+    <h2>Borachio is now <a href="http://scalamock.org/">ScalaMock</a>.</h2>
 
   </div>
 
